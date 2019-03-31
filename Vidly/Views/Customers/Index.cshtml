@@ -1,11 +1,11 @@
 ﻿@model IEnumerable<Vidly.Models.Customer>
 
 @{
-    ViewBag.Title = "Customers";
+    ViewBag.Title = "Clientes";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Customers</h2>
+<h2>Clientes</h2>
 @if (!Model.Any())
 {
     <p>Ainda não temos clientes.</p>
@@ -15,7 +15,8 @@ else
     <table class="table table-bordered table-hover">
         <thead>
         <tr>
-            <th>Cliente</th>
+            <th>Clientes</th>
+            <th>Taxa de Desconto</th>
         </tr>
         </thead>
         <tbody>
@@ -23,6 +24,7 @@ else
         {
             <tr>
                 <td>@Html.ActionLink(customer.Name, "Details", "Customers", new { id = customer.Id }, null)</td>
+                <td>@customer.MembershipType.DiscuntRate%</td>
             </tr>
         }
         </tbody>
