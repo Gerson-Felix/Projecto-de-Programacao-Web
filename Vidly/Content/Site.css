@@ -3,6 +3,17 @@
     padding-bottom: 20px;
 }
 
+/*MINHAS IMPLEMENTAÇÕES*/
+.field-validation-error{color: red!important;}
+
+.color-background {
+    background-color: #1b123a!important;
+}
+
+.input-validation-error {
+    border: 2px solid red!important;
+}
+
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
@@ -22,3 +33,4 @@ select,
 textarea {
     max-width: 280px;
 }
+
