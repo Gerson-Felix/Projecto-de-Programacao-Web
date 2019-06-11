@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using Vidly.Models;
+using Vitty.Models;
 
-namespace Vidly.ViewModels
+namespace Vitty.ViewModels
 {
     public class MovieFormViewModel
     {

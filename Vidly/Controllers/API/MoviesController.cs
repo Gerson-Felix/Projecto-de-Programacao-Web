@@ -6,10 +6,10 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using Vidly.DTOS;
-using Vidly.Models;
+using Vitty.DTOS;
+using Vitty.Models;
 
-namespace Vidly.Controllers.API
+namespace Vitty.Controllers.API
 {
     public class MoviesController : ApiController
     {

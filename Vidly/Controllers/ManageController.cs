@@ -6,9 +6,10 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using Vidly.Models;
+using Vitty.App_Start;
+using Vitty.Models;
 
-namespace Vidly.Controllers
+namespace Vitty.Controllers
 {
     [Authorize]
     public class ManageController : Controller

@@ -3,11 +3,11 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
-using Microsoft.Owin.Security.Google;
 using Owin;
-using Vidly.Models;
+using Vitty.App_Start;
+using Vitty.Models;
 
-namespace Vidly
+namespace Vitty
 {
     public partial class Startup
     {
@@ -56,7 +56,7 @@ namespace Vidly
 
             app.UseFacebookAuthentication(
                appId: "498426030989620",
-               appSecret: "Mamgege20");
+               appSecret: "Qwerty123#");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{

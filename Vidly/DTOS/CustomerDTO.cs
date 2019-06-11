@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
-using Vidly.Models;
+using Vitty.Models;
 
-namespace Vidly.DTOS
+namespace Vitty.DTOS
 {
     public class CustomerDTO
     {

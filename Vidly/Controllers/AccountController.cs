@@ -9,9 +9,10 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using Vidly.Models;
+using Vitty.App_Start;
+using Vitty.Models;
 
-namespace Vidly.Controllers
+namespace Vitty.Controllers
 {
     [Authorize]
     public class AccountController : Controller

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
-using Vidly.DTOS;
+using Vitty.DTOS;
 
-namespace Vidly.Models
+namespace Vitty.Models
 {
     public class Min18YearsIfAMember : ValidationAttribute
     {

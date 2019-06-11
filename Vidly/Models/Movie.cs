@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace Vidly.Models
+namespace Vitty.Models
 {
     public class Movie
     {

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using Vidly.Models;
+using Vitty.Models;
 
-namespace Vidly.ViewModels
+namespace Vitty.ViewModels
 {
     public class CustomerFormViewModel
     {

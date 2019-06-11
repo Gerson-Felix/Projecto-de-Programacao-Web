@@ -6,10 +6,10 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using AutoMapper;
-using Vidly.DTOS;
-using Vidly.Models;
+using Vitty.DTOS;
+using Vitty.Models;
 
-namespace Vidly.Controllers.API
+namespace Vitty.Controllers.API
 {
     public class CustomersController : ApiController
     {

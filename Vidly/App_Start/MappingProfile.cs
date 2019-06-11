@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using AutoMapper;
-using Vidly.DTOS;
-using Vidly.Models;
+using Vitty.DTOS;
+using Vitty.Models;
 
-namespace Vidly.App_Start
+namespace Vitty.App_Start
 {
     public class MappingProfile : Profile
     {

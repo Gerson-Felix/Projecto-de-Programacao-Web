@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Vidly.DTOS
+namespace Vitty.DTOS
 {
     public class GenreDTO
     {
