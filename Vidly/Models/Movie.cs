@@ -27,5 +27,7 @@ namespace Vitty.Models
         [Display(Name = "Número no Stock")]
         [Range(1, 20)]
         public byte NumberInStock { get; set; }
+
+        public byte NumberAvailable { get; set; }
     }
 }

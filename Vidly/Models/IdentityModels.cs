@@ -4,6 +4,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using Vidly.Models;
 
 namespace Vitty.Models
 {
@@ -33,9 +34,10 @@ namespace Vitty.Models
         public DbSet<Genre> Genres { get; set; }
         public DbSet<Movie> Movies { get; set; }
         public DbSet<MembershipType> MembershipTypes { get; set; }
+        public DbSet<Rental> Rentals { get; set; }
 
         public ApplicationDbContext()
-            : base("Vidly", throwIfV1Schema: false)
+            : base("Vitty", throwIfV1Schema: false)
         {
         }
 

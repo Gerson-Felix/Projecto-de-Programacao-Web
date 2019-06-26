@@ -6,6 +6,8 @@ using System.Web;
 using System.Web.Mvc;
 using Vitty.Models;
 using Vitty.ViewModels;
+using System.Runtime.Caching;
+
 
 namespace Vitty.Controllers
 {
@@ -71,6 +73,13 @@ namespace Vitty.Controllers
         
         public ViewResult Index()
         {
+            if (MemoryCache.Default["Genres"] == null)
+            {
+                MemoryCache.Default["Genres"] = _context.Genres.ToList();
+            }
+
+            var genres = MemoryCache.Default["Genres"] as IEnumerable<Genre>;
+
             return View();
         }
 

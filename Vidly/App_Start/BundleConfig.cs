@@ -12,7 +12,9 @@ namespace Vitty.App_Start
                         "~/Scripts/bootbox.js",
                         "~/Scripts/bootstrap.js",
                         "~/Scripts/dataTables/jquery.datatables.js",
-                        "~/Scripts/dataTables/datatables.bootstrap.js"));
+                        "~/Scripts/dataTables/datatables.bootstrap.js",
+                        "~/Scripts/typeahead.bundle.js",
+                        "~/Scripts/toastr.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
@@ -23,8 +25,12 @@ namespace Vitty.App_Start
                         "~/Scripts/modernizr-*"));
             
             bundles.Add(new StyleBundle("~/Content/css").Include(
+                      
                       "~/Content/bootstrap.css",
+                      "~/Content/bootstrap-theme.css",
                       "~/Content/dataTables/css/dataTables.bootstrap.css",
+                      "~/Content/typeahead.css",
+                      "~/Content/toastr.css",
                       "~/Content/site.css"));
         }
     }

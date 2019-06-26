@@ -31,7 +31,7 @@ namespace Vitty.Models
                 return (age >= 18) ?
                     ValidationResult.Success
                     : new ValidationResult("O Cliente deve ter 18 ou superior para ter Tipo de Membro");
-            //}
+            }
             //catch
             //{
             //    var customer = (CustomerDTO)validationContext.ObjectInstance;
@@ -54,7 +54,7 @@ namespace Vitty.Models
             //        : new ValidationResult("O Cliente deve ter 18 ou superior para ter Tipo de Membro");
             //}
             
-        }
+        //}
 
     }
 }

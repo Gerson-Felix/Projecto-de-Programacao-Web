@@ -3,8 +3,6 @@ using System;
 using System.Data.Entity;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 using Vitty.DTOS;
 using Vitty.Models;
@@ -14,18 +12,34 @@ namespace Vitty.Controllers.API
     public class MoviesController : ApiController
     {
         private ApplicationDbContext _context;
+        public IMapper Mapper;
 
         public MoviesController()
         {
             _context = new ApplicationDbContext();
+
+            var config = new MapperConfiguration(cfg =>
+           {
+               cfg.CreateMap<Movie, MovieDTO>();
+               cfg.CreateMap<Genre, GenreDTO>();
+               cfg.CreateMap<MovieDTO, Movie>();
+           });
+
+            Mapper = config.CreateMapper();
         }
 
-        public IEnumerable<MovieDTO> GetMovies()
+        public IEnumerable<MovieDTO> GetMovies(string query = null)
         {
-            return _context.Movies
+            var moviesQuery = _context.Movies
                 .Include(m => m.Genre)
-                .ToList()
-                .Select(Mapper.Map<Movie, MovieDTO>);
+                .Where(m => m.NumberAvailable > 0);
+
+            if (!String.IsNullOrWhiteSpace(query))
+                moviesQuery = moviesQuery.Where(m => m.Name.Contains(query));
+
+            var moviesDtos = Mapper.Map<List<MovieDTO>>(moviesQuery).ToList();
+            
+            return moviesDtos;
         }
 
         public IHttpActionResult GetMovie(int id)
