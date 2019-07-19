@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -19,6 +20,15 @@ namespace Vidly.Controllers.API
         public NewRentalsController()
         {
             _context = new ApplicationDbContext();
+        }
+
+        public IHttpActionResult GetRentalsExam()
+        {
+            var customersQuery = _context.Rentals
+                .Include(c => c.Customer)
+                .Include(f => f.Movie);
+                
+            return Ok(customersQuery);
         }
 
         [HttpPost]

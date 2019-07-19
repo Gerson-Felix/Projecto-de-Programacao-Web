@@ -17,6 +17,12 @@
     </div>
 
     <div class="form-group">
+        <label>NIF</label>
+        @Html.TextBoxFor(m => m.Customer.NIF, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Customer.NIF)
+    </div>
+
+    <div class="form-group">
         <label>Tipo de Membros</label>
         @Html.DropDownListFor(m => m.Customer.MembershipTypeId, new SelectList(Model.MembershipTypes, "Id", "Name"), "", new { @class = "form-control" })
         @Html.ValidationMessageFor(m => m.Customer.MembershipTypeId)

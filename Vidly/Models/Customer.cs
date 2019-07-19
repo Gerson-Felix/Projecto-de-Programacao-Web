@@ -13,6 +13,10 @@ namespace Vitty.Models
         [StringLength(255)]
         public string Name { get; set; }
 
+        [Required]
+        [StringLength(15)]
+        public string NIF { get; set; }
+
         public bool IsSubscribedToNewsletter { get; set; }
 
         public MembershipType MembershipType { get; set; }

@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "EXAM";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>DEFESA</h2>
+<table id="exam" class="table table-bordered table-hover">
+    <th>Data de Arrendamento</th>
+    @*<th>Tipo de Membro</th>*@
+    <tbody></tbody>
+</table>
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            var table = $("#exam").DataTable({
+                ajax: {
+                    url: "/api/NewRentals",
+                    dataSrc: ""
+                },
+                columns: [
+                    {
+                        data: "dataRented"
+                        
+                    }
+                    //{
+                    //    data: "customer.name"
+                    //}
+                    //{
+                    //    data: "id"
+                        
+                    //}
+                ]
+            });
+        });
+    </script>
+
+

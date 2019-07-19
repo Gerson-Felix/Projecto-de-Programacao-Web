@@ -8,30 +8,30 @@ namespace Vitty.App_Start
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/lib").Include(
-                        "~/Scripts/jquery-{version}.js",
-                        "~/Scripts/bootbox.js",
-                        "~/Scripts/bootstrap.js",
-                        "~/Scripts/dataTables/jquery.datatables.js",
-                        "~/Scripts/dataTables/datatables.bootstrap.js",
-                        "~/Scripts/typeahead.bundle.js",
-                        "~/Scripts/toastr.js"));
+                        "~/Assets/js/jquery-{version}.js",
+                        "~/Assets/js/bootbox.js",
+                        "~/Assets/js/bootstrap.js",
+                        "~/Assets/js/dataTables/jquery.datatables.js",
+                        "~/Assets/js/dataTables/datatables.bootstrap.js",
+                        "~/Assets/js/typeahead.bundle.js",
+                        "~/Assets/js/toastr.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
-                        "~/Scripts/jquery.validate*"));
+                        "~/Assets/jquery.validate*"));
 
             // Use a versão em desenvolvimento do Modernizr para desenvolver e aprender. Em seguida, quando estiver
             // pronto para a produção, utilize a ferramenta de build em https://modernizr.com para escolher somente os testes que precisa.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
-                        "~/Scripts/modernizr-*"));
+                        "~/Assets/modernizr-*"));
             
-            bundles.Add(new StyleBundle("~/Content/css").Include(
+            bundles.Add(new StyleBundle("~/css").Include(
                       
-                      "~/Content/bootstrap.css",
-                      "~/Content/bootstrap-theme.css",
-                      "~/Content/dataTables/css/dataTables.bootstrap.css",
-                      "~/Content/typeahead.css",
-                      "~/Content/toastr.css",
-                      "~/Content/site.css"));
+                      "~/Assets/css/bootstrap.css",
+                      "~/Assets/css/bootstrap-theme.css",
+                      "~/Assets/css/dataTables/css/dataTables.bootstrap.css",
+                      "~/Assets/css/typeahead.css",
+                      "~/Assets/css/toastr.css",
+                      "~/Assets/css/site.css"));
         }
     }
 }

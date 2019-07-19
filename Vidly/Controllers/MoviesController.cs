@@ -88,6 +88,7 @@ namespace Vitty.Controllers
 
             if (movie.Id == 0)
             {
+                movie.NumberAvailable = movie.NumberInStock;
                 movie.DateAdded = DateTime.Now;
                 _context.Movies.Add(movie);
             }
